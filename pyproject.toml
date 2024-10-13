@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "todoapp"
+version = "0.1.0"
+description = ""
+authors = ["Timur Kerimov <tim-online@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psycopg2 = "^2.9.9"
+django = "^5.1.2"
+django-environ = "^0.11.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.9"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "ALL"
+]
+ignore = ["ANN101", "ANN102", "ANN401", "RET503", "RUF001", "RUF003", "RUF012", "COM812", "ISC001", "D"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
